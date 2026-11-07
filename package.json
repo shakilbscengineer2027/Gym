@@ -1,0 +1,25 @@
+{
+  "name": "apexpulse",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "mobile:start": "npm run --prefix apps/mobile start",
+    "mobile:web": "npm run --prefix apps/mobile web",
+    "mobile:android": "npm run --prefix apps/mobile android",
+    "mobile:ios": "npm run --prefix apps/mobile ios",
+    "mobile:typecheck": "npm run --prefix apps/mobile typecheck",
+    "test": "node --experimental-strip-types --test apps/mobile/src/__tests__/*.test.ts",
+    "lint": "npm run --prefix apps/mobile lint"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.3"
+  },
+  "dependencies": {
+    "@types/node": "^26.6.6",
+    "expo": "^58.0.23"
+  }
+}
